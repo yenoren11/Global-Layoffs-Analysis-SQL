@@ -4,7 +4,7 @@
 This project focuses on a comprehensive Data Cleaning process for a global layoffs dataset using SQL Server. The primary goal is to transform messy, raw data into a structured, consistent, and clean format, making it ready for Exploratory Data Analysis (EDA) and visualization.
 
 ## 🛠 Tools & Technologies
-- **Language:** SQL (T-SQL)
+- **Language:** SQL
 - **Tool:** Microsoft SQL Server Management Studio (SSMS)
 - **Dataset Source:** [Kaggle - Layoffs 2022 Dataset](https://www.kaggle.com/datasets/swaptr/layoffs-2022)
 
