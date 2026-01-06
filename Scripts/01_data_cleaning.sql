@@ -234,18 +234,28 @@ GO
 
 UPDATE layoffs_staging2
 SET total_laid_off = NULL
-WHERE total_laid_off = 'NULL'
+WHERE ISNUMERIC(total_laid_off) = 0
 GO
+
+ALTER TABLE layoffs_staging2
+ALTER COLUMN total_laid_off INT
+
 
 UPDATE layoffs_staging2
 SET percentage_laid_off = NULL
-WHERE percentage_laid_off = 'NULL'
+WHERE ISNUMERIC(percentage_laid_off) = 0
 GO
+
+ALTER TABLE layoffs_staging2
+ALTER COLUMN percentage_laid_off FLOAT
 
 UPDATE layoffs_staging2
 SET funds_raised_millions = NULL
-WHERE funds_raised_millions = 'NULL'
+WHERE ISNUMERIC(funds_raised_millions) = 0
 GO
+
+ALTER TABLE layoffs_staging2
+ALTER COLUMN funds_raised_millions FLOAT
 
 SELECT *
 FROM layoffs_staging2

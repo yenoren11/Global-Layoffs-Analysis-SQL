@@ -32,3 +32,14 @@ Identified identical rows using the `ROW_NUMBER()` function over a `PARTITION` o
 ### Step 4: Final Cleanup & Removal
 - Removed entries that were missing both `total_laid_off` and `percentage_laid_off`, as they provided no actionable insights for layoff analysis.
 - Dropped the auxiliary `row_num` column used during the deduplication phase.
+
+## 🔍 Exploratory Data Analysis (EDA)
+After cleaning the data, I conducted an exploratory analysis to uncover trends, patterns, and outliers in global layoffs. Key insights explored include:
+
+- **Top Layoffs:** Identified companies with the largest single-day layoffs and highest total layoffs over the years.
+- **Geographic & Industry Trends:** Analyzed which locations (cities/countries) and industries (e.g., Retail, Consumer, Transportation) were hit hardest.
+- **Funding Impact:** Explored the relationship between a company's funding stage and their layoff percentage.
+- **Time-Series Analysis:**
+    - **Yearly Trends:** Compared total layoffs across different years.
+    - **Rolling Total:** Calculated the monthly rolling total of layoffs to visualize the progression over time.
+    - **Top 3 Companies per Year:** Used `DENSE_RANK()` and `CTEs` to identify the top 3 companies with the most layoffs for each specific year.
